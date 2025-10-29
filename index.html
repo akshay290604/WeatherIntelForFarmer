@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Intelligence for Farmers / किसानों के लिए मौसम बुद्धिमत्ता</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1 id="title-en">Weather Intelligence for Farmers</h1>
+      <h1 id="title-hi" class="hidden">किसानों के लिए मौसम बुद्धिमत्ता</h1>
+      <p id="tagline-en" class="tagline">Real-time weather + crop advice for India</p>
+      <p id="tagline-hi" class="tagline hidden">रीयल-टाइम मौसम और फसल सलाह — भारत के लिए</p>
+    </div>
+
+    <div class="controls">
+      <div class="lang-toggle" title="Language / भाषा">
+        <button id="lang-en" class="lang-btn active">🇬🇧 EN</button>
+        <button id="lang-hi" class="lang-btn">🇮🇳 हिन्दी</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="search-card card">
+      <div class="input-row">
+        <input id="locationInput" type="text" placeholder="Enter city, district or pincode" />
+        <button id="getWeatherBtn" class="btn">Get Weather</button>
+      </div>
+      <small id="input-hint-en" class="hint">Example: Pune or 411001</small>
+      <small id="input-hint-hi" class="hint hidden">उदाहरण: Pune या 411001</small>
+    </section>
+
+    <section id="weatherSection" class="weather-card card hidden">
+      <div class="weather-header">
+        <div>
+          <h2 id="placeName"></h2>
+          <p id="weatherDesc"></p>
+        </div>
+        <div class="weather-summary">
+          <img id="weatherIcon" src="" alt="icon" />
+          <div class="temp">
+            <span id="tempVal"></span><sup>°C</sup>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather-details">
+        <div class="detail"><strong id="label-humidity-en">Humidity</strong><strong id="label-humidity-hi" class="hidden">नमी</strong><div id="humidityVal"></div></div>
+        <div class="detail"><strong id="label-wind-en">Wind</strong><strong id="label-wind-hi" class="hidden">हवा</strong><div id="windVal"></div></div>
+        <div class="detail"><strong id="label-rain-en">Rain</strong><strong id="label-rain-hi" class="hidden">बारिश</strong><div id="rainVal"></div></div>
+        <div class="detail"><strong id="label-clouds-en">Clouds</strong><strong id="label-clouds-hi" class="hidden">बादल</strong><div id="cloudsVal"></div></div>
+      </div>
+
+      <div class="advice-section">
+        <h3 id="adviceTitle-en">Farming Advice</h3>
+        <h3 id="adviceTitle-hi" class="hidden">कृषि सलाह</h3>
+        <div id="adviceList" class="advice-list"></div>
+      </div>
+
+      <div class="crop-suggestions">
+        <h4 id="cropTitle-en">Crop Suggestions</h4>
+        <h4 id="cropTitle-hi" class="hidden">फसल सुझाव</h4>
+        <div id="cropList" class="advice-list"></div>
+      </div>
+    </section>
+
+    <div id="loading" class="overlay hidden">
+      <div class="spinner"></div>
+    </div>
+
+    <section class="about-card card">
+      <h3 id="aboutTitle-en">About</h3>
+      <h3 id="aboutTitle-hi" class="hidden">परियोजना के बारे में</h3>
+      <p id="aboutText-en">
+        Weather Intelligence for Farmers helps Indian farmers make better decisions
+        using real-time weather. It suggests irrigation, sowing, harvesting and pest
+        protection tips tailored by local weather.
+      </p>
+      <p id="aboutText-hi" class="hidden">
+        मौसम बुद्धिमत्ता किसानों की मदद करती है रीयल-टाइम मौसम के आधार पर बेहतर निर्णय लेने में।
+        यह सिंचाई, बुवाई, कटाई और कीट नियंत्रण के सुझाव स्थानीय मौसम के अनुसार देता है।
+      </p>
+
+      <a class="btn ghost" href="about.html" id="learnMore-en">Learn more</a>
+      <a class="btn ghost hidden" href="about.html" id="learnMore-hi">और जानें</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Weather Intelligence for Farmers</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
